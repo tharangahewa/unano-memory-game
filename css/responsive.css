@@ -1,0 +1,33 @@
+@media screen and ( max-width: 480px) {
+    .deck {
+        width: 300px;
+        min-height: 300px;
+        padding: 16px;
+    }
+    
+    .deck .card {
+        height: 60px;
+        width: 60px;
+    }    
+
+    .deck .card.show, .deck .card.match {
+        font-size: 20px;
+    }
+}
+
+@media screen and ( min-width: 481px) and ( max-width: 700px) {
+    .deck {
+        width: 480px;
+        min-height: 480px;
+        padding: 28px;
+    }
+    
+    .deck .card {
+        height: 90px;
+        width: 90px;
+    }    
+
+    .deck .card.show, .deck .card.match {
+        font-size: 28px;
+    }
+}

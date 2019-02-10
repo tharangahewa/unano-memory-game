@@ -6,7 +6,6 @@ html {
 *::before,
 *::after {
     box-sizing: inherit;
-    /* border: solid 1px; */
 }
 
 html,
@@ -17,11 +16,11 @@ body {
     padding: 0;
 }
 
-li, ul, p {
+/* li, ul, p {
     margin-block-start: 0em;
     margin-block-end: 0em;
     padding-inline-start: 0em;
-}
+} */
 
 body {
     background: #ffffff url('../img/geometry2.png'); /* Background pattern from Subtle Patterns */
@@ -36,6 +35,10 @@ body {
     overflow: scroll;
 }
 
+.backdrop {
+    filter: blur(5px);
+}
+
 h1 {
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
@@ -47,7 +50,7 @@ h1 {
 
 .deck {
     width: 660px;
-    min-height: 680px;
+    min-height: 660px;
     background: linear-gradient(160deg, #02ccba 0%, #aa7ecd 100%);
     padding: 32px;
     border-radius: 10px;
@@ -71,28 +74,22 @@ h1 {
     justify-content: center;
     align-items: center;
     box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
-    transform: rotateY(0deg);
-}
-
-.deck .card .open {
     transform: rotateY(180deg);
-    
-    /* background: #02b3e4; */
-    cursor: default;
+    transition: all 0.6s;
 }
 
 .deck .card.show {
     font-size: 33px;
-    transition: transform 0.6s;
+    transition: all 0.6s ease-out;
     background: #02b3e4;
-	/* transform-style: preserve-3d; */
-	/* position: relative; */
+    transform: rotateY(0deg);
 }
 
 .deck .card.match {
     cursor: default;
     background: #02ccba;
     font-size: 33px;
+    transform: rotateY(0deg);
 }
 
 /*
@@ -101,20 +98,21 @@ h1 {
 
 .score-panel {
     text-align: left;
-    width: 345px;
+    display: flex;
+
+    width: 320px;
     margin-bottom: 10px;
 }
 
-.score-panel .stars {
-    margin: 0;
-    padding: 0;
-    display: inline-block;
-    margin: 0 5px 0 0;
+.score-panel .restart {
+    /* float: right; */
+    cursor: pointer;
 }
 
-.score-panel .restart {
-    float: right;
-    cursor: pointer;
+.score-panel div {
+
+    margin: auto;
+    /* float: left; */
 }
 
 /*
@@ -124,8 +122,6 @@ h1 {
 
 .dialog {
     position: fixed; 
-    /* display: block;  */
-
     background: linear-gradient(160deg, #02ccba 0%, #5eabc1 100%);
     padding: 12px;
     border-radius: 10px;
@@ -143,7 +139,6 @@ h1 {
 .dialog .stars .fill {
     color: rgba(0, 255, 236, 1);
 }
-
 
 .dialog .stars  {
     list-style: none;
@@ -168,3 +163,5 @@ h1 {
     box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
     margin: 4px 48px;
 }
+
+
