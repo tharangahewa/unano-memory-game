@@ -48,6 +48,7 @@ const finalMovesElement = document.querySelector('#final-moves');
 Applications main control loop
 1) Validate conditions 
 2) Start the timer
+    2.1) Timeout the game after 5 mins - see calcTime function 
 3) Star a move 
 4) If not complete a move 
     4.1) if cards match then show them as mathched 
