@@ -124,11 +124,6 @@ function generateDeck(cards) {
         const iconElement = document.createElement('i');
         iconElement.classList.add('fa');
         iconElement.classList.add('fa-' + card);
-        iconElement.classList.add('back');
-        cardElement.appendChild(iconElement);
-
-        const iconElement = document.createElement('div');
-        iconElement.classList.add('front');
         cardElement.appendChild(iconElement);
     }
     return container;
