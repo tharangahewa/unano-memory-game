@@ -16,11 +16,11 @@ body {
     padding: 0;
 }
 
-/* li, ul, p {
+li, ul, p {
     margin-block-start: 0em;
     margin-block-end: 0em;
     padding-inline-start: 0em;
-} */
+}
 
 body {
     background: #ffffff url('../img/geometry2.png'); /* Background pattern from Subtle Patterns */
@@ -134,6 +134,7 @@ h1 {
     display: inline-block;
     font-size: 20px;
     color: rgba(8, 6, 1, 0.4);
+    margin: 0px 8px;
 }
 
 .dialog .stars .fill {
@@ -143,10 +144,11 @@ h1 {
 .dialog .stars  {
     list-style: none;
     margin: 2px 64px;
+    display: flex;
 }
 
 .dialog p  {
-    margin: 2px 24px;
+    margin: 2px 12px;
     font-size: 18px;
     text-align: center;
 } 
@@ -161,7 +163,7 @@ h1 {
     padding: 6px 12px;
     border: none;
     box-shadow: 5px 2px 20px 0 rgba(46, 61, 73, 0.5);
-    margin: 4px 48px;
+    margin: 4px 72px;
 }
 
 
